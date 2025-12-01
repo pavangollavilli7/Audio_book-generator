@@ -1,0 +1,27 @@
+                    REQUIREMENTS OF AUDIO BOOK GENERATOR
+
+streamlit==1.51.0
+python-docx
+pdfplumber
+Pillow
+pypdfium2
+pyttsx3
+typing_extensions
+protobuf
+cachetools
+requests
+
+
+
+| Library               | Purpose                                 |
+| --------------------- | --------------------------------------- |
+| **streamlit**         | Runs your web UI                        |
+| **python-docx         | Reads DOCX files                        |
+| **pdfplumber**        | Extracts text from PDF                  |
+| **Pillow**            | Image support (used by pdfplumber)      |
+| **pypdfium2**         | Helps with PDF processing               |
+| **pyttsx3**           | Offline text-to-speech engine           |
+| **typing_extensions** | Required by Streamlit                   |
+| **protobuf**          | Required by Streamlit                   |
+| **cachetools**        | Required by Streamlit                   |
+| **requests**          | Helpful for API calls                   |
