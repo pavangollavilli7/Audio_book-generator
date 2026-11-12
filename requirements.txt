@@ -1,27 +1,16 @@
-                    REQUIREMENTS OF AUDIO BOOK GENERATOR
+# AI Audiobook Generator - direct dependencies
+# (Pillow, pypdfium2, protobuf, cachetools, typing_extensions and requests
+#  are installed automatically as dependencies of the packages below.)
 
-streamlit==1.51.0
-python-docx
-pdfplumber
-Pillow
-pypdfium2
-pyttsx3
-typing_extensions
-protobuf
-cachetools
-requests
+streamlit==1.51.0   # web interface
+pdfplumber          # PDF text extraction
+python-docx         # DOCX reading
+gTTS                # text-to-speech (used in app.py)
 
+Pillow, pypdfium2, protobuf and the rest are installed automatically as dependencies of streamlit and pdfplumber.
 
+The file name must be requirements.txt, not requirements.text. pip’s -r option accepts any file name, but Streamlit Cloud and most hosting platforms look specifically for requirements.txt. Your repo already uses the right name, so just replace its contents.
 
-| Library               | Purpose                                 |
-| --------------------- | --------------------------------------- |
-| **streamlit**         | Runs your web UI                        |
-| **python-docx         | Reads DOCX files                        |
-| **pdfplumber**        | Extracts text from PDF                  |
-| **Pillow**            | Image support (used by pdfplumber)      |
-| **pypdfium2**         | Helps with PDF processing               |
-| **pyttsx3**           | Offline text-to-speech engine           |
-| **typing_extensions** | Required by Streamlit                   |
-| **protobuf**          | Required by Streamlit                   |
-| **cachetools**        | Required by Streamlit                   |
-| **requests**          | Helpful for API calls                   |
+Optional: to prevent a future package release from breaking your app, pin the other three versions. In a working environment, run pip freeze | grep -iE "pdfplumber|python-docx|gtts" and copy the versions into the file, like gTTS==2.5.4 (use whatever your command prints).
+
+If you later add features such as multi-file upload or language selection, the list probably won’t change, but a new library would need a new line.
