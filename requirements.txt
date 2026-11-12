@@ -7,10 +7,3 @@ pdfplumber          # PDF text extraction
 python-docx         # DOCX reading
 gTTS                # text-to-speech (used in app.py)
 
-Pillow, pypdfium2, protobuf and the rest are installed automatically as dependencies of streamlit and pdfplumber.
-
-The file name must be requirements.txt, not requirements.text. pip’s -r option accepts any file name, but Streamlit Cloud and most hosting platforms look specifically for requirements.txt. Your repo already uses the right name, so just replace its contents.
-
-Optional: to prevent a future package release from breaking your app, pin the other three versions. In a working environment, run pip freeze | grep -iE "pdfplumber|python-docx|gtts" and copy the versions into the file, like gTTS==2.5.4 (use whatever your command prints).
-
-If you later add features such as multi-file upload or language selection, the list probably won’t change, but a new library would need a new line.
